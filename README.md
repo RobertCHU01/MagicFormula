@@ -23,3 +23,12 @@ Magic formula looks for a stock with both high ROA and high Dividend Yield.
 
 In this way, we are buy a "good quality" stock with "low price". However, the real implementation of Magic formula is more complex, because we usually want a basket of stocks to reduce risks. This involves selecting top 30 stocks, selecting from large/small companies, renewing our formula every month... One thing to keep in mind is magic formula only shows its magic in the long term and investment is never a short-time gambling, so if your magic formula does not perform well, stick to it!!! and See what happens in 5-6 years.
 
+## Begin by Finding Financial Statements
+Here are some websites to look at large companies' financial statements.
+
+[Apple](https://investor.apple.com/investor-relations/default.aspx)  
+[Nike](https://investors.nike.com/investors/news-events-and-reports/investor-news/investor-news-details/2023/NIKE-Inc.-Reports-Fiscal-2024-Second-Quarter-Results/default.aspx)  
+[Coco Cola](https://investors.coca-colacompany.com/financial-information/balance-sheet)  
+[Thermo Fisher Scientific Inc](https://ir.thermofisher.com/investors/financials/quarterly-results/default.aspx)  
+
+
