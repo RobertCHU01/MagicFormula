@@ -1,29 +1,72 @@
 # MagicFormula
-A tool to calculate the investment return from MagicFormula mentioned in book--That Still Beats the Market
+This repository introduces the Magic Formula investment method developed by Joel Greenblatt in "The Little Book That Beats the Market", and provides code to implement this strategy.
 
 ## What is Magic Formula
-### Related Concepts
-To understand the idea of magic formula, we first need to learn two financial concepts--Capital Return & Stock Yield.
+Magic Formula aims to identify high-quality companies trading at attractive valuations by ranking stocks based on two key factors:
 
-#### Capital Return/Return on Assets(ROA)
-ROA = Net Income/Total Assets
+Return on Capital (ROC)
+Earnings Yield
 
-
-ROA measures a company's ability to converts input(investment) into output(income). Companies with higher ROA can get more income from a fixed amount of assets. A company with high ROA is a good company, because it has fast development. However, ROA is not enough for us to determine whether we want to buy a stock, because a company has good future development does not mean that we can earn money on its stock. To earn money on its stock, we need to look at another factor--Stock Yield.
-
-#### Stock Yield/Dividend Yield
-Dividend Yield = Annual Dividends Per Share/Price per share
+### Ideas of Magic Formula
+Magic Formula looks for a stock with both a high ROC and a high Earnings Yield. 
 
 
-Divendend Yield measures your income from stock from the money you invest. You can invest less money in a company with high Divendend Yield to get the same income as invest more money in a company with low Divendend Yield, so we "pay" less for same income. In summary, a stock with high Dividend Yield is a "low-price" stock.
+In this way, we are buying a "good quality" stock at a "low price". However, the real implementation of Magic Formula is more complex, because we usually want a basket of stocks to reduce risks. This involves selecting the top 30 stocks, selecting from large/small companies, and renewing our formula every month... One thing to keep in mind is magic formula only shows its magic in the long term and investment is never short-time gambling, so if your magic formula does not perform well, stick to it!!! and See what happens in 5-6 years.
 
-### Magic Formula
-Magic formula looks for a stock with both high ROA and high Dividend Yield. 
+### Two Indicators in the Magic Formula
+To understand the idea of magic formula, we first need to learn two financial concepts--Return on Capital (ROC) & Earnings Yield.
+
+#### Return on Capital (ROC)
+ROC measures how efficiently a company generates profits from its capital.
+$$CopyROC = EBIT / (Net Working Capital + Net Fixed Assets)$$
+
+EBIT = Earnings Before Interest and Taxes
+Net Working Capital = Current Assets - Current Liabilities
+Net Fixed Assets = Total Fixed Assets – Accumulated Depreciation
+
+Why use ROC instead of other indicators?
 
 
-In this way, we are buy a "good quality" stock with "low price". However, the real implementation of Magic formula is more complex, because we usually want a basket of stocks to reduce risks. This involves selecting top 30 stocks, selecting from large/small companies, renewing our formula every month... One thing to keep in mind is magic formula only shows its magic in the long term and investment is never a short-time gambling, so if your magic formula does not perform well, stick to it!!! and See what happens in 5-6 years.
+EBIT in the numerator:
+(1)Eliminates distortions from different tax rates and debt levels
+(2)Allows for fair comparison of operating earnings across companies
 
-## Begin by Finding Financial Statements
+
+(Net Working Capital + Net Fixed Assets) in the denominator:
+
+(1)Focuses on tangible capital employed in the business
+(2)Excludes excess cash and goodwill, providing a more accurate picture of capital needed to run the business
+(3)More representative than total assets (used in ROA) or equity (used in ROE)
+
+
+
+#### Earnings Yield
+Earnings Yield is a valuation metric that indicates how much a company earns relative to its market value.
+
+$$CopyEarnings Yield = EBIT / Enterprise Value$$
+
+
+Enterprise Value = Market Capitalization + Debt - Cash
+
+Why use Earnings Yield instead of other indicators?
+
+Uses EBIT instead of net income:
+
+(1)Eliminates distortions from different tax rates and debt levels
+
+
+Uses Enterprise Value instead of Market Capitalization:
+
+(1)enterprise value takes into account both the principal value of stock owed to purchase a business, and consider the amount of debt a company takes on in order to generate operating income.
+
+
+
+By combining these two indicators, the Magic Formula aims to identify companies that are both highly profitable (high ROC) and undervalued (high Earnings Yield).
+
+
+## Getting Started
+
+### Start by Financial Statement
 Here are some websites to look at large companies' financial statements.
 
 [Apple](https://investor.apple.com/investor-relations/default.aspx)  
